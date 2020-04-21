@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Start blog Area -->
+    <section class="blog-area section-gap">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 pb-30 header-text">
+            <h1>Your Recent Notes</h1>
+            <p>
+              Create , Update And Share your Notes With Others ..,
+            </p>
+
+            <a href="{%url 'notes:add_note' %}" style="margin-left:300px">Add New Note</a>
+          </div>
+        </div>
+        <div class="row">
+          {% for note in all_notes %}
+            <div class="single-blog col-lg-4 col-md-4">
+           {% if note.img %}
+              <img class="f-img img-fluid mx-auto" src="{{note.img.url}}"style="width:100%; height:65%">
+              {% else %}
+              <img class="f-img img-fluid mx-auto" src="{% static 'home_static/img/no-image.jpg' %}"style="width:100%; height:65%">
+
+            {% endif %}
+
+            <h4>
+              <a href="{% url 'notes:note_detail' note.slug %}">{{note.title}}</a>
+            </h4>
+
+              {{note.content |safe| truncatewords:'10'}}
+
+            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+              <div>
+                <img class="img-fluid" src="{% static 'home_static/img/logo.jpg' %}" width="20px" height="20px">
+                <a href="#"><span>{{note.user.username}}</span></a>
+              </div>
+              <div class="meta">
+                {{note.created }}
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+    <!-- end blog Area -->
+
+{% endblock %}

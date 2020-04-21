@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block body %}
+
+    <!-- Start blog Area -->
+    <section class="blog-area section-gap">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-md-8 pb-30 header-text">
+            <h1>{{note}}</h1>
+            <p>
+              {{note.user.username}} &nbsp; || {{note.created}}
+            </p>
+            <a href="{% url 'notes:note_edit' note.slug %}" style="margin-left:300px;"> Update Note </a>
+            <a href="{% url 'notes:note_delete' note.slug %}" style="margin-left:300px;"> Delete Note </a>
+          </div>
+        </div>
+
+
+        <div class="row">
+          <div class="single-blog col-lg-10 col-md-10">
+            {% if note.img %}
+            <img class="f-img img-fluid mx-auto" src="{{note.img.url}}" style="width:50%; height:50%">
+            {% else %}
+            <img class="f-img img-fluid mx-auto" src="{% static 'home_static/img/no-image.jpg' %}" style="width:50%; height:50%;">
+            {% endif %}
+            <p>
+              {{note.content | safe}}
+            </p>
+            <div class="bottom d-flex justify-content-between align-items-center flex-wrap">
+
+              <div class="meta">
+                13th Dec
+                <span class="lnr lnr-heart"></span> 15
+                <span class="lnr lnr-bubble"></span> 04
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end blog Area -->
+
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% load bootstrap4 %}
+{% load static %}
+{% block body %}
+
+<div style="margin:80px;">
+  <form method="post">
+    {% csrf_token %}
+
+    {% bootstrap_form user_form %}
+    {% bootstrap_form profile_form %}
+
+    {% buttons %}
+        <button type="submit" class="btn btn-primary">Save Changes</button>
+    {% endbuttons %}
+
+  </form>
+</div>
+
+
+{% endblock  %}
