@@ -25,7 +25,7 @@ SECRET_KEY = 'r#!)p)!22cdv^im#+3npm!i^yg249z7afjbi-$-9w_4hi%-%_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [  ]
+ALLOWED_HOSTS = [ 'murmuring-headland-30969.herokuapp.com' ]
 
 
 # Application definition
@@ -125,7 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.0/howto/static-files/
 
 STATIC_URL = '/static/'
-
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static"),
 ]
