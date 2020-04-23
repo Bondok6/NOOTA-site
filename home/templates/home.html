@@ -26,7 +26,7 @@
             {% endif %}
 
             <h4>
-              <a href="{% url 'notes:note_detail' note.slug %}">{{note.title}}</a>
+              <a href="{% url 'home:notedetails' note.slug %}">{{note.title}}</a>
             </h4>
 
               {{note.content |safe|truncatewords:'10'}}

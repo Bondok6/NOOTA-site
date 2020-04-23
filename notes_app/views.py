@@ -23,6 +23,7 @@ def all_notes(request):
 
 #show one note details
 def detail(request,slug):
+
     user = request.user
     profile = get_object_or_404(Profile , user= user)
     note = Note.objects.get(slug=slug)
@@ -31,7 +32,6 @@ def detail(request,slug):
         'profile' : profile ,
     }
     return render(request , 'one_note.html', context)
-
 
 
 def note_add(request):

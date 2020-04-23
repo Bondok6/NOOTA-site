@@ -12,8 +12,6 @@
             <p>
               {{note.user.username}} &nbsp; || {{note.created}}
             </p>
-            <a href="{% url 'notes:note_edit' note.slug %}" style="margin-left:300px;"> <button class="btn btn-primary">Update Note</button> </a> <br><br>
-            <a href="{% url 'notes:note_delete' note.slug %}" style="margin-left:300px;"> <button class="btn btn-primary">Delete Note</button> </a>
           </div>
         </div>
 

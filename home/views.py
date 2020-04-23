@@ -20,3 +20,14 @@ def allnotes(request):
             'all_notes': notes ,
         }
     return render(request , 'home.html' , context)
+
+
+def notedetails(request,slug):
+        user = request.user
+        profile = get_object_or_404(Profile , user= user)
+        note = Note.objects.get(slug=slug)
+        context ={
+            'note':note ,
+            'profile' : profile ,
+        }
+        return render(request , 'note_details.html', context)
