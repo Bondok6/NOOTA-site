@@ -25,6 +25,9 @@
             {% else %}
             <img class="f-img img-fluid mx-auto" src="{% static 'home_static/img/no-image.jpg' %}" style="width:50%; height:50%;">
             {% endif %}
+            <h4>
+              <a href="{% url 'notes:note_detail' note.slug %}">{{note.title}}</a>
+            </h4>
             <p>
               {{note.content | safe}}
             </p>
