@@ -1942,7 +1942,7 @@ nav a:hover {
 }
 
 .section-gap {
-  padding: 100px 0;
+  padding: 20px 0;
 }
 
 .section-title {
@@ -2506,9 +2506,13 @@ nav a:hover {
   transform: scale(1.05);
 }
 
+.footer-area {
+    padding-top: 20px;
+    background-color: #222222;
+}
 
 .footer-area .footer-nav li {
-  margin-top: 0px;
+  margin-top: 8px;
 }
 
 .footer-area .footer-nav li a {
