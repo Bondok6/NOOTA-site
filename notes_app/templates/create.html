@@ -3,16 +3,17 @@
 {% block body %}
 
 <div class="row">
-  <div class="add_form">
+  <div class="add_form">z
 
     <form method="post">
       {% csrf_token %}
       {% bootstrap_form form %}
       {{ form.media }}
-      
+
       {% buttons %}
           <button type="submit" class="btn btn-primary">Save Changes</button>
       {% endbuttons %}
+
     </form>
 
   </div>
