@@ -4,7 +4,7 @@
 /* Mobile Layout: 320px */
 /* Wide Mobile Layout: 480px */
 /* =================================== */
-/*  Basic Style 
+/*  Basic Style
 /* =================================== */
 ::-moz-selection {
   /* Code for Firefox */
@@ -1942,7 +1942,7 @@ nav a:hover {
 }
 
 .section-gap {
-  padding: 120px 0;
+  padding: 100px 0;
 }
 
 .section-title {
@@ -2506,13 +2506,9 @@ nav a:hover {
   transform: scale(1.05);
 }
 
-.footer-area {
-  padding-top: 100px;
-  background-color: #222222;
-}
 
 .footer-area .footer-nav li {
-  margin-top: 8px;
+  margin-top: 0px;
 }
 
 .footer-area .footer-nav li a {
@@ -2588,24 +2584,8 @@ p {
   color: #fff;
 }
 
-.single-footer-widget input {
-  line-height: 38px;
-  border: none;
-  background: #fff;
-  font-weight: 300;
-  border-radius: 20px;
-  color: #777;
-  padding-left: 20px;
-  width: 100%;
-}
 
-.single-footer-widget .bb-btn {
-  color: #fff;
-  font-weight: 300;
-  border-radius: 0;
-  z-index: 9999;
-  cursor: pointer;
-}
+
 
 @media (max-width: 1024px) {
   .single-footer-widget .nw-btn {
