@@ -25,7 +25,7 @@ SECRET_KEY = 'r#!)p)!22cdv^im#+3npm!i^yg249z7afjbi-$-9w_4hi%-%_a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['noota.herokuapp.com']
                     #'noota.herokuapp.com'
 
 
