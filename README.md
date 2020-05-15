@@ -1,2 +1,2 @@
 # NOOTA-site
-notes website
+Notes website
